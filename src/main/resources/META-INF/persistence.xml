@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.1">
+    <persistence-unit name="campusflowPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.campusflow.model.User</class>
+        <class>com.campusflow.model.Student</class>
+        <class>com.campusflow.model.Faculty</class>
+        <class>com.campusflow.model.Admin</class>
+        <class>com.campusflow.model.Resource</class>
+        <class>com.campusflow.model.Classroom</class>
+        <class>com.campusflow.model.Laboratory</class>
+        <class>com.campusflow.model.Equipment</class>
+        <class>com.campusflow.model.Booking</class>
+        <class>com.campusflow.model.CampusEvent</class>
+        <class>com.campusflow.model.EventRegistration</class>
+        <class>com.campusflow.model.Notification</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:./data/campusflow;AUTO_SERVER=TRUE"/>
+            <property name="jakarta.persistence.jdbc.user" value="sa"/>
+            <property name="jakarta.persistence.jdbc.password" value=""/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>
